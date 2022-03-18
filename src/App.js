@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './Components/Home';
+
 
 function App() {
+  const LastName = 18
+  let age = 27
+  var tab = ["Ahmed","Taher","Khaldoun"]
+  const bestUser = {rank : 23,location : 'Lac'}
+  const handleAlert=()=>{
+    alert('Hello Props')
+  }
+
+  const handleName =(a)=>{
+    alert(`Hello ${a}`)
+  }
+  const show = true
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Home LastName={LastName} age={age} tab={tab} bestUser = {bestUser} handleAlert={handleAlert} handleName={handleName} show={show}>
+        <h2>Khaldoun</h2>
+        <h4>F3</h4>
+      </Home>
+
+     
     </div>
   );
 }
